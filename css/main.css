@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: #e1e1e1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn {
+  background-color: #f6334f;
+  min-width: 168px;
+  padding: 16px 24px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 28px;
+  position: relative;
+  margin: 0 20px 24px;
+  margin-bottom: 24px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  -webkit-box-shadow: 0 6px 15px 2px rgba(246, 51, 79, 0.4), inset 0 0 18px 0 rgba(246, 51, 79, 0.8);
+          box-shadow: 0 6px 15px 2px rgba(246, 51, 79, 0.4), inset 0 0 18px 0 rgba(246, 51, 79, 0.8);
+  text-transform: uppercase;
+  border: 0;
+  margin-top: 48px;
+}
+
+.search {
+  background-color: #652A8E;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+}
+
+.search .container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search .container .searchTitle {
+  font-size: 29px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #C39FDE;
+  text-align: center;
+  margin-bottom: 72px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.search .container form {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search .container form .btn {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+}
+
+.search .container form .autocompleteField {
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search .container form .autocompleteField .inputSearch {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 80px;
+  -webkit-transition: all 0.4s 0.4s ease, width 0.4s ease;
+  transition: all 0.4s 0.4s ease, width 0.4s ease;
+}
+
+.search .container form .autocompleteField .inputSearch .icon-Bop-055 {
+  right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.search .container form .autocompleteField .inputSearch input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 14px;
+  color: transparent;
+  border-radius: 100%;
+  -webkit-transition: all 0.4s 0.2s ease, color 0.4s ease;
+  transition: all 0.4s 0.2s ease, color 0.4s ease;
+}
+
+.search .container form .autocompleteField .voiceSearch {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9351C2;
+  border-radius: 100%;
+  -webkit-transition: all 0.4s 0.4s ease;
+  transition: all 0.4s 0.4s ease;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.search .container form .autocompleteField .voiceSearch .icon-Bop-171 {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.search .container.showInput form .btn {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.4s 0.6s ease;
+  transition: all 0.4s 0.6s ease;
+}
+
+.search .container.showInput form .autocompleteField .inputSearch {
+  right: 0px;
+  width: calc((100% - 24px) - 16px);
+  -webkit-transition: all 0.4s ease, width 0.4s 0.4s ease;
+  transition: all 0.4s ease, width 0.4s 0.4s ease;
+}
+
+.search .container.showInput form .autocompleteField .inputSearch .icon-Bop-055 {
+  right: 16px;
+  -webkit-transition: all 0.2s 0.4s ease;
+  transition: all 0.2s 0.4s ease;
+}
+
+.search .container.showInput form .autocompleteField .inputSearch input {
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 0px 40px 0px 16px;
+  -webkit-transition: all 0.4s 0.2s ease, color 0.4s 0.8s ease;
+  transition: all 0.4s 0.2s ease, color 0.4s 0.8s ease;
+}
+
+.search .container.showInput form .autocompleteField .voiceSearch {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.search .container.showInput form .autocompleteField .voiceSearch .icon-Bop-171 {
+  width: 24px;
+  height: 24px;
+}
+
+.search .container .icon-Bop-055 {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/Bop-055.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+.search .container .icon-Bop-171 {
+  background-image: url(/assets/Bop-171.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
