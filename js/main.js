@@ -16,9 +16,12 @@ window.addEventListener("load", event => {
             container.classList.add('showInput');
             input.disabled = false;
 
+
             searchTitle.style.opacity = "0";
+            searchTitle.style.transform = "translateX(-20px)";
             setTimeout(() => {
                 searchTitle.style.opacity = "1";
+                searchTitle.style.transform = "translateX(0px)";
                 searchTitle.innerText = "O que procura?";
             }, 400);
         }
@@ -30,9 +33,11 @@ window.addEventListener("load", event => {
             container.classList.remove('showInput');
 
             searchTitle.style.opacity = "0";
+            searchTitle.style.transform = "translateX(-20px)";
 
             setTimeout(() => {
                 searchTitle.style.opacity = "1";
+                searchTitle.style.transform = "translateX(0px)";
                 searchTitle.innerText = "Fale agora";
             }, 400);
         }
