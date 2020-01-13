@@ -11,6 +11,8 @@ $neu-01: #363636;
 $neu-02: #5A5A5A;
 $neu-03: #909090;
 
+$cubic: cubic-bezier(0.53, 0.03, 0.06, 1.21);
+
 
 @mixin md {
     @media screen and (max-width: 1023px) {
@@ -131,7 +133,6 @@ body {
                 align-items: center;
                 justify-content: center;
 
-
                 .inputSearch {
                     width: 40px;
                     height: 40px;
@@ -148,7 +149,6 @@ body {
                         transition: all 0.2s 0.2s ease;
                     }
 
-
                     input {
                         width: 100%;
                         height: 40px;
@@ -157,7 +157,7 @@ body {
                         font-size: 14px;
                         color: transparent;
                         border-radius: 100%;
-                        transition: all 0.4s 0.4s ease, color 0.4s 0.2s ease,
+                        transition: all 0.4s 0.4s ease, border 0.4s 0.2s ease, color 0.4s 0.2s ease,
                     }
                 }
 
@@ -171,8 +171,19 @@ body {
                     border-radius: 100%;
                     transition: all 0.4s 0.6s ease;
                     transform: translateX(-20px);
+                    position: relative;
 
-                    //position: absolute;
+                    &:before,
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        background-color: $m-04;
+                        border-radius: 100%;
+                        z-index: -1;
+                        transition: all 0.4s ease;
+                    }
 
                     .icon-Bop-171 {
                         width: 50px;
@@ -180,6 +191,45 @@ body {
                         transition: all 0.4s 0.2s ease;
                     }
 
+                    &.animeVoice {
+
+                        &:before,
+                        &:after {
+                            width: calc(100% + 40px);
+                            height: calc(100% + 40px);
+                            opacity: 0.4;
+                            animation: voiceSearch 1.6s ease-in-out infinite;
+
+                            @keyframes voiceSearch {
+                                0% {
+                                    transform: scale(1);
+                                }
+
+                                20% {
+                                    transform: scale(0.8);
+                                }
+
+                                60% {
+                                    transform: scale(1.1);
+                                }
+
+                                80% {
+                                    transform: scale(0.7);
+                                }
+
+                                100% {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+
+                        &:after {
+                            width: calc(100% + 80px);
+                            height: calc(100% + 80px);
+                            opacity: 0.2;
+                            animation-delay: 0.1s;
+                        }
+                    }
                 }
             }
         }
@@ -196,7 +246,7 @@ body {
                     .inputSearch {
                         right: 0px;
                         width: calc((100% - 24px) - 16px);
-                        transition: all 0.4s 0s ease, width 0.4s 0.4s ease;
+                        transition: all 0.4s 0s ease, width 0.4s 0.4s $cubic;
 
                         .icon-Bop-055 {
                             right: 16px;
