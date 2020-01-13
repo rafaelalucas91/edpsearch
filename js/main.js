@@ -35,7 +35,7 @@ window.addEventListener("load", event => {
 
         if (container.classList.contains('showInput')) {
             container.classList.remove('showInput');
-
+            input.disabled = true;
             searchTitle.style.opacity = "0";
             searchTitle.style.transform = "translateX(-20px)";
 
@@ -52,13 +52,24 @@ window.addEventListener("load", event => {
     }
 
     function loadSearch() {
-        voiceSearch.classList.remove('animeVoice');
 
-        searchTitle.style.opacity = "0";
-        searchTitle.style.transform = "translateX(-20px)";
+        if (voiceSearch.classList.contains('animeVoice')) {
+            voiceSearch.classList.remove('animeVoice');
 
-        setTimeout(() => {
-            loadingSearch.style.display = "block";
-        }, 400);
+            searchTitle.style.opacity = "0";
+            searchTitle.style.transform = "translateX(-20px)";
+
+            setTimeout(() => {
+                teste.innerText = "refresh";
+                loadingSearch.style.display = "block";
+            }, 400);
+        } else {
+            location.reload();
+
+        }
+
+
+
+
     }
 });
