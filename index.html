@@ -17,9 +17,19 @@
     <div class="search overlay active">
         <header>
             <a href="#" class="icon-Bop-071 closeButton"></a>
+            <button class="teste">Click to simulate</button>
         </header>
         <div class="container">
-            <h2 class="searchTitle">Fale Agora</h2>
+            <div class="titleContainer">
+                <h2 class="searchTitle">Fale Agora</h2>
+                <!--To Activate while it's getting the response from Google API-->
+                <div class="loadingSearch">
+                    <span class="loader"></span>
+                    <span class="loader"></span>
+                    <span class="loader"></span>
+                </div>
+            </div>
+
             <!-- Input Search + Voice Search Icon -->
             <form>
                 <div class="autocompleteField" data-name="Autocomplete" data-nomatch="Sem correspondências"
@@ -40,6 +50,7 @@
             </form>
         </div>
     </div>
+
 </body>
 
 <script src="js/main.js"></script>

@@ -5,11 +5,14 @@ window.addEventListener("load", event => {
         inputSearch = document.querySelector('.inputSearch'),
         input = document.querySelector('input'),
         voiceSearch = document.querySelector('.voiceSearch'),
-        searchTitle = document.querySelector('.searchTitle');
+        searchTitle = document.querySelector('.searchTitle'),
+        teste = document.querySelector('.teste'),
+        loadingSearch = document.querySelector('.loadingSearch');
 
     // Events
     inputSearch.addEventListener('click', showInput);
     voiceSearch.addEventListener('click', hideInput);
+    teste.addEventListener('click', loadSearch);
 
     // To show Search Input
     function showInput() {
@@ -46,5 +49,16 @@ window.addEventListener("load", event => {
                 voiceSearch.classList.add('animeVoice');
             }, 1200);
         }
+    }
+
+    function loadSearch() {
+        voiceSearch.classList.remove('animeVoice');
+
+        searchTitle.style.opacity = "0";
+        searchTitle.style.transform = "translateX(-20px)";
+
+        setTimeout(() => {
+            loadingSearch.style.display = "block";
+        }, 400);
     }
 });
